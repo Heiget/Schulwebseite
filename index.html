@@ -1,30 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>School Newspaper - Home Test</title>
-    <link rel="stylesheet" href="test-style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MI Schülerzeitung</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>📰 School Newspaper</h1>
-        <nav>
-            <a href="test-homepage.html">Home</a>
-            <a href="test-article.html">Article</a>
-            <a href="test-contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section class="news-list">
-            <h2>Latest News</h2>
-            <ul>
-                <li><a href="test-article.html">School Wins Award</a></li>
-                <li><a href="test-article.html">New Cafeteria Menu</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 School Newspaper Test</p>
-    </footer>
+  <header>
+    <div class="brand">
+      <div class="logo">IDK</div>
+      <div>
+        <h1>MI Schülerzeitung — Ausgabe 2025</h1>
+        <div class="subtitle">Eine digitale Schulzeitung aus Fehraltorf</div>
+      </div>
+    </div>
+    <nav>
+      <button class="btn" data-filter="all">Alle</button>
+      <button class="btn" data-filter="donnerstag">Donnerstag</button>
+      <button class="btn" data-filter="montag">Montag</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Suche Artikel, Autor oder Thema..." />
+      <div class="article-count">Anzahl Artikel: <span id="count">0</span></div>
+    </div>
+
+    <section class="grid" id="cards"></section>
+
+  </main>
+
+  <footer>
+    &copy; MI Schülerzeitung — erstellt automatisch. Möchtest du bestimmte Artikel ausgefüllt haben, sag Bescheid!
+    
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="panel">
+      <div class="panel-header">
+        <h2 id="modal-title"></h2>
+        <div class="controls"><button class="btn" id="modal-close">Schliessen</button></div>
+      </div>
+      <div id="modal-meta" class="modal-meta"></div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="articles.js"></script>
+  <script src="script.js"></script>
+
+  
+
 </body>
 </html>
